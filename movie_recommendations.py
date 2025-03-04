@@ -29,11 +29,6 @@ def download_file(file_id, dest_path):
     print(f"Downloading {file_id} to {dest_path}")
     gdown.download(url, dest_path, quiet=False)
 
-# Test a specific file
-download_file(COSINE_SIM_ID, "models/test_cosine_sim.pkl")
-print("Download complete.")
-print("File exists:", os.path.exists("models/test_cosine_sim.pkl"))
-
 # Download datasets if not already present
 MOVIES_CSV_PATH = os.path.join(DATA_DIR, "movies_cleaned.csv")
 if not os.path.exists(MOVIES_CSV_PATH):
