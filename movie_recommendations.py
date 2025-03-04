@@ -26,7 +26,13 @@ os.makedirs(PICKLE_DIR, exist_ok=True)
 # Function to download files from Google Drive
 def download_file(file_id, dest_path):
     url = f"https://drive.google.com/uc?id={file_id}"
+    print(f"Downloading {file_id} to {dest_path}")
     gdown.download(url, dest_path, quiet=False)
+
+# Test a specific file
+download_file(COSINE_SIM_ID, "models/test_cosine_sim.pkl")
+print("Download complete.")
+print("File exists:", os.path.exists("models/test_cosine_sim.pkl"))
 
 # Download datasets if not already present
 MOVIES_CSV_PATH = os.path.join(DATA_DIR, "movies_cleaned.csv")
