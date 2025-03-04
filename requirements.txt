@@ -3,7 +3,9 @@ pandas
 numpy
 scikit-learn
 scipy
+matplotlib
+seaborn
 joblib
-requests
-pickle-mixin
 gdown
+nltk
+requests
